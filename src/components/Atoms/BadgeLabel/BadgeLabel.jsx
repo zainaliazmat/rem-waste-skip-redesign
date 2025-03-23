@@ -5,7 +5,7 @@ const BadgeLabel = ({
   text,
   isSelected,
   position,
-  bgColor = " bg-[#2251c7] ",
+  bgColor = "bg-[#2251c7]",
   textColor,
   image,
 }) => {
