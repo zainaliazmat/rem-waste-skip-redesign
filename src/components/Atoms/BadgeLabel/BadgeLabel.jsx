@@ -30,7 +30,8 @@ const BadgeLabel = ({
   return (
     <Typography
       variant="small"
-      className={`absolute flex items-center gap-1 ${bgColor} !${textColor} ${positionClasses} px-3 py-1 
+      color={textColor}
+      className={`absolute flex items-center gap-1 ${bgColor} ${positionClasses} px-3 py-1 
         rounded-sm font-semibold duration-600 transition-all ${
           isSelected
             ? "translate-x-0"
