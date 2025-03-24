@@ -48,9 +48,9 @@ This project is a UI/UX redesign of an existing web page as part of a technical 
    ```
 4. Start the development server:
    ```sh
-   npm start  # or yarn start
+   npm run dev  # or yarn dev
    ```
-5. Open `http://localhost:3000` in a browser.
+5. Open `http://localhost:5173` in a browser.
 
 ## Conclusion
 This project demonstrates my ability to modernize UI, enhance user experience, and write well-structured, maintainable React code while ensuring responsiveness.
