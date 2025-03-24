@@ -12,8 +12,6 @@ Currently, two official plugins are available:
 If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
 # rem-waste-skip-redesign
 
-# Web Page Redesign Assessment
-
 ## Overview
 This project is a UI/UX redesign of an existing web page as part of a technical assessment. The goal was to enhance aesthetics, ensure responsiveness, and write clean, maintainable React code while preserving functionality.
 
