@@ -5,6 +5,7 @@ import SkipCard from "../../Molecules/SkipCard";
 import Typography from "../../Atoms/Typography";
 import StepProgress from "../../Molecules/StepProgress";
 import FooterBanner from "../../Molecules/FooterBanner";
+import Loader from "../../Atoms/Loader";
 
 const SkipSelect = () => {
   const { data, isLoading, error } = useQuery({
@@ -15,7 +16,6 @@ const SkipSelect = () => {
   const [selectedSkip, setSelectedSkip] = useState(null);
   const [currentStep, setCurrentStep] = useState("Select Skip");
 
-  if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
 
   return (
@@ -28,16 +28,20 @@ const SkipSelect = () => {
         </Typography>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-6">
-        {data?.map((skip) => (
-          <SkipCard
-            key={skip?.id}
-            data={skip}
-            selectedSkip={selectedSkip}
-            setSelectedSkip={setSelectedSkip}
-          />
-        ))}
-      </div>
+      {!isLoading ? (
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-6">
+          {data?.map((skip) => (
+            <SkipCard
+              key={skip?.id}
+              data={skip}
+              selectedSkip={selectedSkip}
+              setSelectedSkip={setSelectedSkip}
+            />
+          ))}
+        </div>
+      ) : (
+        <Loader />
+      )}
       <FooterBanner data={data} selectedSkip={selectedSkip} />
     </div>
   );

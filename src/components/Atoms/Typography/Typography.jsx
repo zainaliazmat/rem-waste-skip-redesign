@@ -12,6 +12,7 @@ const variants = {
 };
 
 const Typography = ({
+  // eslint-disable-next-line no-unused-vars
   as: Tag = "p",
   variant = "body",
   className = "",

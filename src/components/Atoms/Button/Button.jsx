@@ -15,7 +15,7 @@ const Button = ({
   return (
     <button
       onClick={onClick}
-      className={`px-4 py-2 rounded flex items-center space-x-2 ease-in-out duration-400 transition-all ${variants[variant]} ${className}`}
+      className={`px-4 py-2 rounded flex items-center cursor-pointer space-x-2 ease-in-out duration-400 transition-all ${variants[variant]} ${className}`}
     >
       <span>{text}</span>
       {image && <img src={image} alt={image} className="w-3.5 h-3.5" />}

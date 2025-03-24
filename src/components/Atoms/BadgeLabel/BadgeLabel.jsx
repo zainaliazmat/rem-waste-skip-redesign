@@ -16,7 +16,7 @@ const BadgeLabel = ({
       "bottom-right": "bottom-4 right-0",
       "top-left": "top-4 left-0",
       "bottom-left": "bottom-4 left-0",
-    }[position] || "top-4 right-0"; // Default: top-right
+    }[position] || "top-4 right-0";
 
   // Determine translation direction based on position
   const translateClasses =
@@ -25,7 +25,7 @@ const BadgeLabel = ({
       "bottom-right": "translate-x-[calc(100%-4px)]",
       "top-left": "-translate-x-[calc(100%-4px)]",
       "bottom-left": "-translate-x-[calc(100%-4px)]",
-    }[position] || "translate-x-[calc(100%-4px)]"; // Default: top-right
+    }[position] || "translate-x-[calc(100%-4px)]";
 
   return (
     <Typography
