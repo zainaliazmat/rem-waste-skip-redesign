@@ -8,7 +8,7 @@ const SkipButton = ({ skipId, selectedSkip }) => {
   return (
     <button className=" relative overflow-hidden h-16 ">
       <span
-        className={`w-full h-full rounded bg-[#2251c7] absolute bottom-0 left-0 ease-in-out duration-600 transition-all ${
+        className={`w-full h-full rounded bg-primary absolute bottom-0 left-0 ease-in-out duration-600 transition-all ${
           isSelected ? "" : "translate-y-full group-hover:translate-y-0"
         } `}
       ></span>

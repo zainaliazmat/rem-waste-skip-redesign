@@ -3,6 +3,8 @@ import { useQuery } from "@tanstack/react-query";
 import { fetchSkips } from "../../../utils/apis.js";
 import SkipCard from "../../Molecules/SkipCard";
 import Typography from "../../Atoms/Typography";
+import StepProgress from "../../Molecules/StepProgress";
+import FooterBanner from "../../Molecules/FooterBanner";
 
 const SkipSelect = () => {
   const { data, isLoading, error } = useQuery({
@@ -11,12 +13,14 @@ const SkipSelect = () => {
   });
 
   const [selectedSkip, setSelectedSkip] = useState(null);
+  const [currentStep, setCurrentStep] = useState("Select Skip");
 
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
 
   return (
     <div className=" max-w-[1440px] p-4 lg:p-8 mx-auto">
+      <StepProgress currentStep={currentStep} setCurrentStep={setCurrentStep} />
       <div className="flex flex-col gap-2 items-center mb-6">
         <Typography variant="h4">{"Choose Your Skip Size"}</Typography>
         <Typography variant="caption">
@@ -34,6 +38,7 @@ const SkipSelect = () => {
           />
         ))}
       </div>
+      <FooterBanner data={data} selectedSkip={selectedSkip} />
     </div>
   );
 };

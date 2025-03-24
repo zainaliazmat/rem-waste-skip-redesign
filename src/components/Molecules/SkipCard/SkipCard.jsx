@@ -12,7 +12,7 @@ const SkipCard = ({ data, selectedSkip, setSelectedSkip }) => {
   return (
     <div
       className={`flex flex-col w-full group bg-gray-700 duration-600 transition-all ${
-        isSelected ? " ring-3 ring-[#2251c7] " : ""
+        isSelected ? " ring-3 ring-primary " : ""
       } overflow-hidden rounded-lg max-w-[500px] mx-auto cursor-pointer`}
       onClick={() => {
         setSelectedSkip(id);
